@@ -1,4 +1,4 @@
-# 4330-Minecraft-Mod
+# The Little Things
 + Full Fabric Modding Documentation - https://docs.fabricmc.net/1.20.4/develop/getting-started/introduction-to-fabric-and-modding
 
 ### Setting up the development environment
