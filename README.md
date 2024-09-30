@@ -5,4 +5,4 @@
 + Download JDK 17 - https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
 + Download IntelliJ Community Edition (scroll down) - https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
   + Could download Ultimate Edition if you sign up for student license (not neccessary, community is fine enough)
-+ Download Minecraft Development Plugin `File > Settings > Plugins > Marketplace Tab` and search `Minecraft Development`
++ Download Minecraft Development Plugin in IntelliJ `File > Settings > Plugins > Marketplace Tab` and search `Minecraft Development`
