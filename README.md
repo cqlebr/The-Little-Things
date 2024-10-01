@@ -3,6 +3,6 @@
 
 ### Setting up the development environment
 + Download JDK 17 - https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
-+ Download IntelliJ Community Edition (scroll down) - https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
++ Download IntelliJ Community Edition (scroll down) - https://www.jetbrains.com/idea/download/?section=windows
   + Could download Ultimate Edition if you sign up for student license (not neccessary, community is fine enough)
 + Download Minecraft Development Plugin in IntelliJ `File > Settings > Plugins > Marketplace Tab` and search `Minecraft Development`
