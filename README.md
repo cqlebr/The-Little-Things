@@ -1,5 +1,6 @@
 # The Little Things
 + Full Fabric Modding Documentation - https://docs.fabricmc.net/1.20.4/develop/getting-started/introduction-to-fabric-and-modding
++ Fabric Modding Tutorial/Help for 1.20.X https://www.youtube.com/playlist?list=PLKGarocXCE1EO43Dlf5JGh7Yk-kRAXUEJ
 
 ### Setting up the development environment
 + Download JDK 17 - https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
