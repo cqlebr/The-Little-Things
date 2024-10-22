@@ -11,7 +11,7 @@
 ### DEFINITELY ADDING (maple stuff): (21+ items)
 - Maple trees and maple wood + maple craftable items (14+ items) (Caleb: not finished)
 - maple syrup 
-- at least two passive mobs for the forest
+- at least two passive mobs for the forest (Brice: nf)
 - pancakes
 - 2-3 new plants 
 - grappling hook 
