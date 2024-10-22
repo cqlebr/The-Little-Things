@@ -9,7 +9,7 @@
 + Download Minecraft Development Plugin in IntelliJ `File > Settings > Plugins > Marketplace Tab` and search `Minecraft Development`
 
 ### DEFINITELY ADDING (maple stuff): (21+ items)
-- Maple trees and maple wood + maple craftable items (14+ items)
+- Maple trees and maple wood + maple craftable items (14+ items) (Caleb: not finished)
 - maple syrup 
 - at least two passive mobs for the forest
 - pancakes
