@@ -28,3 +28,6 @@
    - Jump buff
 - one ruin plant (no new blocks though) 
 - Scythe
+
+Milestone 2
+https://docs.google.com/document/d/12ieRZoSgvz7iLbqhP4xwXLH2gfAfouCQuaXYEpzinJo/edit?usp=sharing
