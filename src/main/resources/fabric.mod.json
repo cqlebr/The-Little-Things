@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"project.thelittlethings.TheLittleThingsClient"
+		],
+		"fabric-datagen": [
+			"project.thelittlethings.TheLittleThingsDataGenerator"
 		]
 	},
 	"mixins": [
