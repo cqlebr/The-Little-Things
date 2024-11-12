@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "the-little-things:block/maple_leaves_red"
+  }
+}

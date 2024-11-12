@@ -2,8 +2,12 @@ package project.thelittlethings;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import project.thelittlethings.block.ModBlocks;
+import project.thelittlethings.item.ModItemGroups;
+import project.thelittlethings.item.ModItems;
 
 public class TheLittleThings implements ModInitializer {
 	public static final String MOD_ID = "the-little-things";
@@ -11,6 +15,14 @@ public class TheLittleThings implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+
+		ModItemGroups.registerItemGroups();
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+
+		// FURNACE FUEL ITEMS
+		FuelRegistry.INSTANCE.add(ModBlocks.MAPLE_WOOD, 300);
+		FuelRegistry.INSTANCE.add(ModBlocks.MAPLE_PLANKS, 300);
+
 	}
 }

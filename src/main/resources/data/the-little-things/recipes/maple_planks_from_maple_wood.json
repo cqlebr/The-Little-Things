@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "the-little-things:maple_wood"
+    }
+  ],
+  "result": {
+    "item": "the-little-things:maple_planks",
+    "count": 4
+  }
+}
