@@ -1,5 +1,5 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/leaves",
   "textures": {
     "all": "the-little-things:block/maple_leaves_orange"
   }

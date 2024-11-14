@@ -1,9 +1,11 @@
 {
-  "item.the-little-things.ruby": "Ruby",
   "item.the-little-things.maple_creme_brulee": "Maple Creme Brulee",
 
 
   "block.the-little-things.maple_wood": "Maple Wood",
+  "block.the-little-things.stripped_maple_wood": "Stripped Maple Wood",
+  "block.the-little-things.maple_log": "Maple Log",
+  "block.the-little-things.stripped_maple_log": "Stripped Maple Log",
   "block.the-little-things.maple_planks": "Maple Planks",
   "block.the-little-things.maple_leaves_red": "Red Maple Leaves",
   "block.the-little-things.maple_leaves_yellow": "Yellow Maple Leaves",

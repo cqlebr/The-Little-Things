@@ -2,7 +2,18 @@
   "replace": false,
   "values": [
     "the-little-things:maple_planks",
-    "the-little-things:maple_wood"
+    "the-little-things:maple_wood",
+    "the-little-things:maple_log",
+    "the-little-things:stripped_maple_log",
+    "the-little-things:stripped_maple_wood",
+    "the-little-things:maple_stairs",
+    "the-little-things:maple_slab",
+    "the-little-things:maple_button",
+    "the-little-things:maple_pressure_plate",
+    "the-little-things:maple_fence",
+    "the-little-things:maple_fence_gate",
+    "the-little-things:maple_door",
+    "the-little-things:maple_trapdoor"
 
   ]
 }

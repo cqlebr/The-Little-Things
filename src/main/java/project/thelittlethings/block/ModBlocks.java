@@ -30,7 +30,6 @@ public class ModBlocks {
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES).nonOpaque()));
     public static final Block MAPLE_LEAVES_ORANGE = registerBlock("maple_leaves_orange",
             new LeavesBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_LEAVES).nonOpaque()));
-
     public static final Block MAPLE_STAIRS = registerBlock("maple_stairs",
             new StairsBlock(ModBlocks.MAPLE_PLANKS.getDefaultState(),FabricBlockSettings.copyOf(Blocks.CHERRY_STAIRS)));
     public static final Block MAPLE_SLAB = registerBlock("maple_slab",
@@ -48,6 +47,7 @@ public class ModBlocks {
             new DoorBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_DOOR), BlockSetType.CHERRY));
     public static final Block MAPLE_TRAPDOOR = registerBlock("maple_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_TRAPDOOR), BlockSetType.CHERRY));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);

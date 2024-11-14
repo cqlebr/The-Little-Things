@@ -11,7 +11,6 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registry;
 
 public class ModItems {
-    public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
     public static final Item MAPLE_CREME_BRULEE = registerItem("maple_creme_brulee", new Item(new FabricItemSettings().food(ModFoodComponents.MAPLE_CREME_BRULEE)));
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
