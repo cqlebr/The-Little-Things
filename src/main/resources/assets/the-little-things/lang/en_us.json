@@ -1,0 +1,23 @@
+{
+  "item.the-little-things.maple_creme_brulee": "Maple Creme Brulee",
+
+
+  "block.the-little-things.maple_wood": "Maple Wood",
+  "block.the-little-things.stripped_maple_wood": "Stripped Maple Wood",
+  "block.the-little-things.maple_log": "Maple Log",
+  "block.the-little-things.stripped_maple_log": "Stripped Maple Log",
+  "block.the-little-things.maple_planks": "Maple Planks",
+  "block.the-little-things.maple_leaves_red": "Red Maple Leaves",
+  "block.the-little-things.maple_leaves_yellow": "Yellow Maple Leaves",
+  "block.the-little-things.maple_leaves_orange": "Orange Maple Leaves",
+  "block.the-little-things.maple_stairs": "Maple Stairs",
+  "block.the-little-things.maple_slab": "Maple Slab",
+  "block.the-little-things.maple_button": "Maple Button",
+  "block.the-little-things.maple_pressure_plate": "Maple Pressure Plate",
+  "block.the-little-things.maple_fence": "Maple Fence",
+  "block.the-little-things.maple_fence_gate": "Maple Fence Gate",
+  "block.the-little-things.maple_door": "Maple Door",
+  "block.the-little-things.maple_trapdoor": "Maple Trapdoor",
+
+  "itemgroup.maple": "Maple Items"
+}

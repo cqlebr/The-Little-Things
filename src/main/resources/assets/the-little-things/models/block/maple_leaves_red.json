@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "the-little-things:block/maple_leaves_red"
+  }
+}
