@@ -1,33 +1,25 @@
-// Made with Blockbench 4.11.2
-// Exported for Minecraft version 1.17+ for Yarn
-// Paste this class into your mod and generate all required imports
 
-package com.example.mod;
+package project.thelittlethings;
 
-public class Squirrel.json extends EntityModel<Entity> {
-	private final ModelPart bone;
+import net.minecraft.client.model.*;
+import net.minecraft.client.render.VertexConsumer;
+import net.minecraft.client.render.entity.model.SinglePartEntityModel;
+import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.util.math.MathHelper;
+import project.thelittlethings.entity.custom.SquirrelEntity;
+
+public class SquirrelModel<T extends SquirrelEntity> extends SinglePartEntityModel<T> {
+	private final ModelPart bone; // bone == squirrel itself
 	private final ModelPart head;
-	private final ModelPart arms;
-	private final ModelPart leftleg;
-	private final ModelPart bone3;
-	private final ModelPart bone2;
-	private final ModelPart rightleg;
-	private final ModelPart bone5;
-	private final ModelPart bone4;
-	private final ModelPart tail;
-	private final ModelPart body;
-	public Squirrel.json(ModelPart root) {
+
+	public SquirrelModel(ModelPart root) {
 		this.bone = root.getChild("bone");
-		this.head = root.getChild("head");
-		this.arms = root.getChild("arms");
-		this.leftleg = root.getChild("leftleg");
-		this.bone3 = root.getChild("bone3");
-		this.bone2 = root.getChild("bone2");
-		this.rightleg = root.getChild("rightleg");
-		this.bone5 = root.getChild("bone5");
-		this.bone4 = root.getChild("bone4");
-		this.tail = root.getChild("tail");
-		this.body = root.getChild("body");
+		this.head = bone.getChild("head");
+
+		// porcupine -> body -> torso -> head
+		// squirrel -> bone -> head
+		// could go in to BB and change bone -> squirrel ***
+
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
@@ -76,11 +68,37 @@ public class Squirrel.json extends EntityModel<Entity> {
 		ModelPartData cube_r10 = body.addChild("cube_r10", ModelPartBuilder.create().uv(0, 0).cuboid(-3.0F, -4.5F, -2.0F, 3.0F, 3.0F, 7.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 0.0F, -0.1745F, 0.0F, 0.0F));
 		return TexturedModelData.of(modelData, 32, 32);
 	}
+
+
+	// can adjust speed of animations here
+	// need to modify animation speed of baby
 	@Override
-	public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setAngles(SquirrelEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+
+		this.getPart().traverse().forEach(ModelPart::resetTransform);
+		this.setHeadAngles(netHeadYaw, headPitch);
+
+		this.animateMovement(ModAnimations.SQUIRREL_RUNNING, limbSwing, limbSwingAmount, 3f, 3f); // the speed of its running animation
+		this.updateAnimation(entity.idleAnimationState, ModAnimations.SQUIRREL_IDLE, ageInTicks, 0.1f); // speed and rate of idle animation
 	}
+	private void setHeadAngles(float headYaw, float headPitch) {
+		headYaw = MathHelper.clamp(headYaw, -30.0F, 30.0F);
+		headPitch = MathHelper.clamp(headPitch, -25.0F, 45.0F);
+
+		this.head.yaw = headYaw * 0.017453292F;
+		this.head.pitch = headPitch * 0.017453292F;
+	}
+
+
+
+
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
 		bone.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+	}
+
+	@Override
+	public ModelPart getPart() {
+		return bone;
 	}
 }
