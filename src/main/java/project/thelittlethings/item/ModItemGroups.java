@@ -17,6 +17,9 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maple"))
                     .icon(() -> new ItemStack(ModBlocks.MAPLE_PLANKS)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MAPLE_CREME_BRULEE);
+                        entries.add(ModBlocks.BLUEBELL);
+                        entries.add(ModBlocks.COLUMBINE);
+                        entries.add(ModBlocks.TROUT_LILY);
 
                         entries.add(ModBlocks.MAPLE_WOOD);
                         entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
@@ -34,6 +37,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MAPLE_FENCE_GATE);
                         entries.add(ModBlocks.MAPLE_DOOR);
                         entries.add(ModBlocks.MAPLE_TRAPDOOR);
+                        entries.add(ModItems.MAPLE_SIGN);
+                        entries.add(ModItems.HANGING_MAPLE_SIGN);
 
                     }).build());
 

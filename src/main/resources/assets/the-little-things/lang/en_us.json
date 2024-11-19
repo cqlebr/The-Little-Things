@@ -18,6 +18,14 @@
   "block.the-little-things.maple_fence_gate": "Maple Fence Gate",
   "block.the-little-things.maple_door": "Maple Door",
   "block.the-little-things.maple_trapdoor": "Maple Trapdoor",
+  "block.the-little-things.maple_standing_sign": "Maple Standing Sign",
+  "block.the-little-things.maple_wall_sign": "Maple Wall Sign",
+  "block.the-little-things.maple_hanging_sign": "Maple Hanging Sign",
+  "block.the-little-things.maple_wall_hanging_sign": "Maple Wall Hanging Sign",
+
+  "block.the-little-things.bluebell": "Bluebell",
+  "block.the-little-things.columbine": "Columbine",
+  "block.the-little-things.trout_lily": "Trout Lily",
 
   "itemgroup.maple": "Maple Items"
 }
