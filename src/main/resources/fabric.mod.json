@@ -1,41 +1,32 @@
 {
-	"schemaVersion": 1,
-	"id": "the-little-things",
-	"version": "${version}",
-	"name": "The Little Things",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/the-little-things/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"project.thelittlethings.TheLittleThings"
-		],
-		"client": [
-			"project.thelittlethings.TheLittleThingsClient"
-		]
-	},
-	"mixins": [
-		"the-little-things.mixins.json",
-		{
-			"config": "the-little-things.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.16.5",
-		"minecraft": "~1.20.1",
-		"java": ">=17",
-		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
-	}
+  "schemaVersion": 1,
+  "id": "grapplinghook",
+  "version": "${version}",
+  "name": "grapplinghook",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/grapplinghook/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.example.grapplinghook.client.GrapplinghookClient"
+    ],
+    "main": [
+      "com.example.grapplinghook.Grapplinghook"
+    ]
+  },
+  "mixins": [
+    "grapplinghook.mixins.json",
+    {
+      "config": "grapplinghook.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
 }
