@@ -17,6 +17,7 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maple"))
                     .icon(() -> new ItemStack(ModBlocks.MAPLE_PLANKS)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MAPLE_CREME_BRULEE);
+                        entries.add(ModItems.SQUIRREL_SPAWN_EGG);
 
                         entries.add(ModBlocks.MAPLE_WOOD);
                         entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);

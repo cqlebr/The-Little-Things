@@ -20,6 +20,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import project.thelittlethings.entity.ModEntities;
+import project.thelittlethings.item.ModItems;
 
 public class SquirrelEntity extends AnimalEntity {
 
@@ -64,7 +65,7 @@ public class SquirrelEntity extends AnimalEntity {
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this)); // main priority, prevents mob from drowning, priority 0
         this.goalSelector.add(1, new AnimalMateGoal(this, 1.15D)); // allows them to mate given proper food
-        this.goalSelector.add(2, new TemptGoal(this, 1.25d, Ingredient.ofItems(Items.BEETROOT), false)); //
+        this.goalSelector.add(2, new TemptGoal(this, 1.25d, Ingredient.ofItems(ModItems.MAPLE_CREME_BRULEE), false)); //
         this.goalSelector.add(3, new FollowParentGoal(this, 1.15D));
         this.goalSelector.add(4, new WanderAroundFarGoal(this, 1D));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4f));
@@ -76,16 +77,15 @@ public class SquirrelEntity extends AnimalEntity {
 
     public static DefaultAttributeContainer.Builder createSquirrelAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 15) // squirrel base health value
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f) // move speed
-                .add(EntityAttributes.GENERIC_ARMOR, 0.5f);
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 10) // squirrel base health value
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f) // move speed
+                .add(EntityAttributes.GENERIC_ARMOR, 0.1f);
 
     }
 
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(Items.BEETROOT);
+        return stack.isOf(ModItems.MAPLE_CREME_BRULEE);
     }
-
 
 
 

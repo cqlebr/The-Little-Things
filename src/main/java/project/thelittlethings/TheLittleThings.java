@@ -2,8 +2,11 @@ package project.thelittlethings;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import project.thelittlethings.block.ModBlocks;

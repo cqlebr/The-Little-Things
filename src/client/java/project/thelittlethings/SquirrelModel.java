@@ -71,15 +71,19 @@ public class SquirrelModel<T extends SquirrelEntity> extends SinglePartEntityMod
 
 
 	// can adjust speed of animations here
-	// need to modify animation speed of baby
+
 	@Override
 	public void setAngles(SquirrelEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 
 		this.getPart().traverse().forEach(ModelPart::resetTransform);
 		this.setHeadAngles(netHeadYaw, headPitch);
 
-		this.animateMovement(ModAnimations.SQUIRREL_RUNNING, limbSwing, limbSwingAmount, 3f, 3f); // the speed of its running animation
-		this.updateAnimation(entity.idleAnimationState, ModAnimations.SQUIRREL_IDLE, ageInTicks, 0.1f); // speed and rate of idle animation
+		if (limbSwingAmount > 0.1) {
+			this.animateMovement(ModAnimations.SQUIRREL_RUNNING, limbSwing, limbSwingAmount, 3f, 3f);
+			this.updateAnimation(entity.idleAnimationState, ModAnimations.SQUIRREL_IDLE, 0);
+		} else {
+			this.updateAnimation(entity.idleAnimationState, ModAnimations.SQUIRREL_IDLE, ageInTicks, 1f);
+		}
 	}
 	private void setHeadAngles(float headYaw, float headPitch) {
 		headYaw = MathHelper.clamp(headYaw, -30.0F, 30.0F);
@@ -88,9 +92,6 @@ public class SquirrelModel<T extends SquirrelEntity> extends SinglePartEntityMod
 		this.head.yaw = headYaw * 0.017453292F;
 		this.head.pitch = headPitch * 0.017453292F;
 	}
-
-
-
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {

@@ -313,7 +313,7 @@ public class ModAnimations {
                                     Transformation.Interpolations.LINEAR),
                             new Keyframe(1f, AnimationHelper.createRotationalVector(0f, 0f, 0f),
                                     Transformation.Interpolations.LINEAR))).build();
-    public static final Animation SQUIRREL_IDLE = Animation.Builder.create(1.1676667f).looping()
+    public static final Animation SQUIRREL_IDLE = Animation.Builder.create(1.1676667f)
             .addBoneAnimation("head",
                     new Transformation(Transformation.Targets.TRANSLATE,
                             new Keyframe(0f, AnimationHelper.createTranslationalVector(0f, 0f, 0f),
