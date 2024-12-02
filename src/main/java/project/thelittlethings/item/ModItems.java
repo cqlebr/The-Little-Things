@@ -17,7 +17,7 @@ public class ModItems {
 
 
     public static final Item SQUIRREL_SPAWN_EGG = registerItem("squirrel_spawn_egg",
-        new SpawnEggItem(ModEntities.SQUIRREL, 0xa86518, 0x3b260f, new FabricItemSettings()));
+       new SpawnEggItem(ModEntities.SQUIRREL, 0xa86518, 0x3b260f, new FabricItemSettings()));
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
@@ -30,7 +30,6 @@ public class ModItems {
 
     public static void registerModItems() {
         TheLittleThings.LOGGER.info("Registering Mod Items" + TheLittleThings.MOD_ID);
-
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientItemGroup);
     }
 }

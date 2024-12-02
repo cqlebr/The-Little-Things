@@ -12,7 +12,7 @@ public class SquirrelRenderer extends MobEntityRenderer<SquirrelEntity, Squirrel
     public static final Identifier TEXTURE = new Identifier(TheLittleThings.MOD_ID, "textures/entity/squirreltexture.png");
 
     public SquirrelRenderer(EntityRendererFactory.Context context) {
-        super(context, new SquirrelModel<>(context.getPart(ModModelLayers.SQUIRREL)), 0.6f); // size of shadow
+        super(context, new SquirrelModel<>(context.getPart(ModModelLayers.SQUIRREL)), 0.2f); // size of shadow
     }
 
     @Override
@@ -25,13 +25,13 @@ public class SquirrelRenderer extends MobEntityRenderer<SquirrelEntity, Squirrel
     public void render(SquirrelEntity mobEntity, float f, float g, MatrixStack matrixStack,
                        VertexConsumerProvider vertexConsumerProvider, int i) {
         if(mobEntity.isBaby()) {
-            matrixStack.scale(0.5f, 0.5f, 0.5f); // ensure xyz is same all  around
+            matrixStack.scale(0.5f, 0.5f, 0.5f);// ensure xyz is same all  around
+            mobEntity.setMovementSpeed(0.1f);
         }
         else
         {
             matrixStack.scale(1f, 1f, 1f);
         }
-
         super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
     }
 }
