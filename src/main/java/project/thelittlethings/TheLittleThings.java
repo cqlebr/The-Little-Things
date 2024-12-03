@@ -2,16 +2,14 @@ package project.thelittlethings;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.SpawnEggItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import project.thelittlethings.block.ModBlocks;
 import project.thelittlethings.entity.ModEntities;
 import project.thelittlethings.entity.custom.SquirrelEntity;
+import project.thelittlethings.entity.custom.RobinEntity;
 import project.thelittlethings.item.ModItemGroups;
 import project.thelittlethings.item.ModItems;
 
@@ -32,6 +30,7 @@ public class TheLittleThings implements ModInitializer {
 
 		// mob attributes
 		FabricDefaultAttributeRegistry.register(ModEntities.SQUIRREL, SquirrelEntity.createSquirrelAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.ROBIN, RobinEntity.createRobinAttributes());
 
 	}
 }

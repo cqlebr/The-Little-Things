@@ -17,5 +17,8 @@ public class TheLittleThingsClient implements ClientModInitializer {
 
 		EntityRendererRegistry.register(ModEntities.SQUIRREL, SquirrelRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(ModModelLayers.SQUIRREL, SquirrelModel::getTexturedModelData);
+
+		EntityRendererRegistry.register(ModEntities.ROBIN, RobinRenderer::new);
+		EntityModelLayerRegistry.registerModelLayer(ModModelLayers.ROBIN, RobinModel::getTexturedModelData);
 	}
-}
+	}

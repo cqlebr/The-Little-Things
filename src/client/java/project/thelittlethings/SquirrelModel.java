@@ -39,7 +39,7 @@ public class SquirrelModel<T extends SquirrelEntity> extends SinglePartEntityMod
 		ModelPartData arms = bone.addChild("arms", ModelPartBuilder.create(), ModelTransform.pivot(-0.4F, -4.0F, 1.0F));
 
 		ModelPartData cube_r5 = arms.addChild("cube_r5", ModelPartBuilder.create().uv(4, 22).cuboid(0.0F, -4.0F, 0.0F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F))
-		.uv(0, 22).cuboid(1.6F, -4.0F, 0.0F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-1.2F, 4.0463F, -1.2758F, -0.0873F, 0.0F, 0.0F));
+				.uv(0, 22).cuboid(1.6F, -4.0F, 0.0F, 1.0F, 3.0F, 1.0F, new Dilation(0.0F)), ModelTransform.of(-1.2F, 4.0463F, -1.2758F, -0.0873F, 0.0F, 0.0F));
 
 		ModelPartData leftleg = bone.addChild("leftleg", ModelPartBuilder.create(), ModelTransform.pivot(1.1F, -1.0F, 5.45F));
 
