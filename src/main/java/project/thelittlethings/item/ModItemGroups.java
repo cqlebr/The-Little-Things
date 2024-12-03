@@ -20,6 +20,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.BLUEBELL);
                         entries.add(ModBlocks.COLUMBINE);
                         entries.add(ModBlocks.TROUT_LILY);
+                        entries.add(ModItems.SQUIRREL_SPAWN_EGG);
 
                         entries.add(ModBlocks.MAPLE_WOOD);
                         entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
