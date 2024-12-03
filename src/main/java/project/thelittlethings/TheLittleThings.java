@@ -2,6 +2,8 @@ package project.thelittlethings;
 
 import net.fabricmc.api.ModInitializer;
 
+
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
@@ -12,6 +14,8 @@ import project.thelittlethings.entity.custom.SquirrelEntity;
 import project.thelittlethings.entity.custom.RobinEntity;
 import project.thelittlethings.item.ModItemGroups;
 import project.thelittlethings.item.ModItems;
+import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 
 public class TheLittleThings implements ModInitializer {
 	public static final String MOD_ID = "the-little-things";
