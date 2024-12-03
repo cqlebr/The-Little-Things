@@ -50,7 +50,7 @@ public class TheLittleThings implements ModInitializer {
 
 	public static class ModifyFishingRod {
 		// Store last grapple time for each player
-		private static final Map<UUID, Long> playerGrappleCooldowns = new HashMap<>();
+		public static final Map<UUID, Long> playerGrappleCooldowns = new HashMap<>();
 
 		public static void setupFishingRodInteraction() {
 			// Modify the fishing rod's use action
@@ -67,7 +67,7 @@ public class TheLittleThings implements ModInitializer {
 			});
 		}
 
-		private static ActionResult grappleAction(PlayerEntity player, World world, Hand hand) {
+		public static ActionResult grappleAction(PlayerEntity player, World world, Hand hand) {
 			if (!world.isClient) {
 				// Check cooldown
 				long currentTime = System.currentTimeMillis();
