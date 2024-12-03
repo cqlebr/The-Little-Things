@@ -8,8 +8,13 @@ import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import project.thelittlethings.block.ModBlocks;
+import project.thelittlethings.datagen.ModWorldGenerator;
+import project.thelittlethings.entity.ModBoats;
 import project.thelittlethings.item.ModItemGroups;
 import project.thelittlethings.item.ModItems;
+import project.thelittlethings.world.gen.ModWorldGeneration;
+import project.thelittlethings.world.tree.ModFoliagePlacerTypes;
+import project.thelittlethings.world.tree.ModTrunkPlacerTypes;
 
 public class TheLittleThings implements ModInitializer {
 	public static final String MOD_ID = "the-little-things";
@@ -57,5 +62,9 @@ public class TheLittleThings implements ModInitializer {
 		FuelRegistry.INSTANCE.add(ModBlocks.MAPLE_FENCE, 300);
 		FuelRegistry.INSTANCE.add(ModBlocks.MAPLE_FENCE_GATE, 300);
 
+		ModWorldGeneration.generateModWorldGen();
+		ModBoats.registerBoats();
+		ModTrunkPlacerTypes.register();
+		ModFoliagePlacerTypes.register();
 	}
 }

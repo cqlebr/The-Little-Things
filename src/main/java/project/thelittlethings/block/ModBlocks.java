@@ -7,7 +7,6 @@ import com.terraformersmc.terraform.sign.block.TerraformWallSignBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.entity.effect.StatusEffects;
@@ -17,6 +16,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
+import project.thelittlethings.world.tree.MapleSaplingGenerator;
 
 
 public class ModBlocks {
@@ -54,12 +54,14 @@ public class ModBlocks {
             new DoorBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_DOOR), BlockSetType.CHERRY));
     public static final Block MAPLE_TRAPDOOR = registerBlock("maple_trapdoor",
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_TRAPDOOR), BlockSetType.CHERRY));
+    public static final Block MAPLE_SAPLING = registerBlock("maple_sapling",
+            new SaplingBlock(new MapleSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING)));
     //SIGN AND BOAT WITH TERRAFORM API
     public static final Identifier MAPLE_SIGN_TEXTURE = new Identifier(TheLittleThings.MOD_ID, "entity/signs/maple");
     public static final Identifier MAPLE_HANGING_SIGN_TEXTURE = new Identifier(TheLittleThings.MOD_ID, "entity/signs/hanging/maple");
     public static final Identifier MAPLE_HANGING_GUI_SIGN_TEXTURE = new Identifier(TheLittleThings.MOD_ID, "textures/gui/hanging_signs/maple");
 
-    public static final Block STANDING_MAPLE_SIGN = Registry.register(Registries.BLOCK, new Identifier(TheLittleThings.MOD_ID,"maple_standing_sign"),
+   public static final Block STANDING_MAPLE_SIGN = Registry.register(Registries.BLOCK, new Identifier(TheLittleThings.MOD_ID,"maple_standing_sign"),
             new TerraformSignBlock(MAPLE_SIGN_TEXTURE,FabricBlockSettings.copyOf(Blocks.CHERRY_SIGN)));
     public static final Block WALL_MAPLE_SIGN = Registry.register(Registries.BLOCK, new Identifier(TheLittleThings.MOD_ID,"maple_wall_sign"),
             new TerraformWallSignBlock(MAPLE_SIGN_TEXTURE,FabricBlockSettings.copyOf(Blocks.CHERRY_WALL_SIGN)));
@@ -101,6 +103,6 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        TheLittleThings.LOGGER.info("Registering Mod Blocks" + TheLittleThings.MOD_ID);
+        TheLittleThings.LOGGER.info("Registering Mod Blocks " + TheLittleThings.MOD_ID);
     }
 }

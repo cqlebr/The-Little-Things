@@ -39,10 +39,13 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MAPLE_TRAPDOOR);
                         entries.add(ModItems.MAPLE_SIGN);
                         entries.add(ModItems.HANGING_MAPLE_SIGN);
+                        entries.add(ModItems.MAPLE_BOAT);
+                        entries.add(ModItems.MAPLE_CHEST_BOAT);
+                        entries.add(ModBlocks.MAPLE_SAPLING);
 
                     }).build());
 
     public static void registerItemGroups() {
-        TheLittleThings.LOGGER.info("Registering Mod Item Groups" + TheLittleThings.MOD_ID);
+        TheLittleThings.LOGGER.info("Registering Mod Item Groups " + TheLittleThings.MOD_ID);
     }
 }
