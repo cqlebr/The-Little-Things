@@ -3,6 +3,8 @@ package project.thelittlethings;
 import net.fabricmc.api.ModInitializer;
 
 
+
+
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
@@ -14,15 +16,14 @@ import project.thelittlethings.entity.ModBoats;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-import net.minecraft.item.Item;
-import net.minecraft.item.SpawnEggItem;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import project.thelittlethings.block.ModBlocks;
 import project.thelittlethings.entity.ModEntities;
 import project.thelittlethings.entity.custom.SquirrelEntity;
+import project.thelittlethings.entity.custom.RobinEntity;
 import project.thelittlethings.item.ModItemGroups;
 import project.thelittlethings.item.ModItems;
+import net.minecraft.item.Item;
+import net.minecraft.item.SpawnEggItem;
 import project.thelittlethings.world.gen.ModWorldGeneration;
 import project.thelittlethings.world.tree.ModFoliagePlacerTypes;
 import project.thelittlethings.world.tree.ModTrunkPlacerTypes;
@@ -79,5 +80,7 @@ public class TheLittleThings implements ModInitializer {
 		ModFoliagePlacerTypes.register();
 		// mob attributes
 		FabricDefaultAttributeRegistry.register(ModEntities.SQUIRREL, SquirrelEntity.createSquirrelAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.ROBIN, RobinEntity.createRobinAttributes());
+
 	}
 }

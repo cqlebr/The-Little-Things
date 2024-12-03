@@ -1,7 +1,11 @@
 // Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17+ for Yarn
 // Paste this class into your mod and generate all required imports
-public class Robin extends EntityModel<Robin> {
+
+package com.example.mod;
+   
+public class Robin extends EntityModel<Entity> {
+	private final ModelPart bone;
 	private final ModelPart Head;
 	private final ModelPart Body;
 	private final ModelPart Tail;
@@ -10,21 +14,24 @@ public class Robin extends EntityModel<Robin> {
 	private final ModelPart RightWing;
 	private final ModelPart LeftWing;
 	public Robin(ModelPart root) {
+		this.bone = root.getChild("bone");
 		this.Head = root.getChild("Head");
 		this.Body = root.getChild("Body");
-		this.Tail = this.Body.getChild("Tail");
-		this.Feet = this.Body.getChild("Feet");
-		this.Wings = this.Body.getChild("Wings");
-		this.RightWing = this.Wings.getChild("RightWing");
-		this.LeftWing = this.Wings.getChild("LeftWing");
+		this.Tail = root.getChild("Tail");
+		this.Feet = root.getChild("Feet");
+		this.Wings = root.getChild("Wings");
+		this.RightWing = root.getChild("RightWing");
+		this.LeftWing = root.getChild("LeftWing");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		ModelPartData Head = modelPartData.addChild("Head", ModelPartBuilder.create().uv(22, 0).cuboid(-1.0F, -3.0F, -1.0F, 3.0F, 3.0F, 3.0F, new Dilation(0.0F))
-		.uv(12, 21).cuboid(0.0F, -1.5F, -2.25F, 1.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(-0.75F, 17.5F, -3.25F));
+		ModelPartData bone = modelPartData.addChild("bone", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
 
-		ModelPartData Body = modelPartData.addChild("Body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 19.0F, 0.5F));
+		ModelPartData Head = bone.addChild("Head", ModelPartBuilder.create().uv(22, 0).cuboid(-1.0F, -3.0F, -1.0F, 3.0F, 3.0F, 3.0F, new Dilation(0.0F))
+		.uv(12, 21).cuboid(0.0F, -1.5F, -2.25F, 1.0F, 1.0F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(-0.75F, -6.5F, -3.25F));
+
+		ModelPartData Body = bone.addChild("Body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -5.0F, 0.5F));
 
 		ModelPartData cube_r1 = Body.addChild("cube_r1", ModelPartBuilder.create().uv(20, 11).cuboid(-3.0F, -4.0F, -1.0F, 4.0F, 3.0F, 4.0F, new Dilation(0.0F)), ModelTransform.of(0.75F, 2.0F, 0.5F, -0.3491F, 0.0F, 0.0F));
 
@@ -51,11 +58,10 @@ public class Robin extends EntityModel<Robin> {
 		return TexturedModelData.of(modelData, 64, 64);
 	}
 	@Override
-	public void setAngles(Robin entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
+	public void setAngles(Entity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	}
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		Head.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
-		Body.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		bone.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 }
