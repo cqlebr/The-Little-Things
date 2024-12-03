@@ -23,6 +23,12 @@
 		],
 		"fabric-datagen": [
 			"project.thelittlethings.TheLittleThingsDataGenerator"
+		],
+		"datagen": [
+			"project.thelittlethings.TheLittleThingsDataGenerator"
+		],
+		"terrablender": [
+			"project.thelittlethings.world.biome.ModTerrablenderAPI"
 		]
 	},
 	"mixins": [

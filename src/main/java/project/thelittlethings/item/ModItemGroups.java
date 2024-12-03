@@ -17,6 +17,9 @@ public class ModItemGroups {
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maple"))
                     .icon(() -> new ItemStack(ModBlocks.MAPLE_PLANKS)).entries((displayContext, entries) -> {
                         entries.add(ModItems.MAPLE_CREME_BRULEE);
+                        entries.add(ModBlocks.BLUEBELL);
+                        entries.add(ModBlocks.COLUMBINE);
+                        entries.add(ModBlocks.TROUT_LILY);
                         entries.add(ModItems.SQUIRREL_SPAWN_EGG);
 
                         entries.add(ModBlocks.MAPLE_WOOD);
@@ -35,10 +38,15 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MAPLE_FENCE_GATE);
                         entries.add(ModBlocks.MAPLE_DOOR);
                         entries.add(ModBlocks.MAPLE_TRAPDOOR);
+                        entries.add(ModItems.MAPLE_SIGN);
+                        entries.add(ModItems.HANGING_MAPLE_SIGN);
+                        entries.add(ModItems.MAPLE_BOAT);
+                        entries.add(ModItems.MAPLE_CHEST_BOAT);
+                        entries.add(ModBlocks.MAPLE_SAPLING);
 
                     }).build());
 
     public static void registerItemGroups() {
-        TheLittleThings.LOGGER.info("Registering Mod Item Groups" + TheLittleThings.MOD_ID);
+        TheLittleThings.LOGGER.info("Registering Mod Item Groups " + TheLittleThings.MOD_ID);
     }
 }
