@@ -40,6 +40,9 @@ public class ModItems {
         return Registry.register(Registries.ITEM, new Identifier(TheLittleThings.MOD_ID, name), item);
     }
 
+    public static final Item GRAPPLING_HOOK = registerItem("grappling_hook",
+            new Item(new FabricItemSettings().maxCount(1)));
+
     public static void registerModItems() {
         TheLittleThings.LOGGER.info("Registering Mod Items " + TheLittleThings.MOD_ID);
 
