@@ -20,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import project.thelittlethings.block.ModBlocks;
 import project.thelittlethings.entity.ModEntities;
+import project.thelittlethings.entity.custom.RobinEntity;
 import project.thelittlethings.entity.custom.SquirrelEntity;
 import project.thelittlethings.item.ModItemGroups;
 import project.thelittlethings.item.ModItems;
@@ -97,6 +98,7 @@ public class TheLittleThings implements ModInitializer {
 		ModFoliagePlacerTypes.register();
 		// mob attributes
 		FabricDefaultAttributeRegistry.register(ModEntities.SQUIRREL, SquirrelEntity.createSquirrelAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.ROBIN, RobinEntity.createRobinAttributes());
 		ModifyFishingRod.setupFishingRodInteraction();
 
 	}

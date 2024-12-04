@@ -15,7 +15,7 @@ public class ModEntities {
     public static final EntityType<SquirrelEntity> SQUIRREL = Registry.register(Registries.ENTITY_TYPE,
           new Identifier(TheLittleThings.MOD_ID, "squirrel"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, SquirrelEntity::new)
-                    .dimensions(EntityDimensions.fixed(1f, 1f)).build());
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
 
     public static final EntityType<RobinEntity> ROBIN = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(TheLittleThings.MOD_ID, "robin"),

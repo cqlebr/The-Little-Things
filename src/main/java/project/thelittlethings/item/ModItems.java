@@ -29,7 +29,10 @@ public class ModItems {
 
 
     public static final Item SQUIRREL_SPAWN_EGG = registerItem("squirrel_spawn_egg",
-       new SpawnEggItem(ModEntities.SQUIRREL, 0xa86518, 0x3b260f, new FabricItemSettings()));
+       new SpawnEggItem(ModEntities.SQUIRREL, 0x523c20, 0xefdebe, new FabricItemSettings()));
+
+    public static final Item ROBIN_SPAWN_EGG = registerItem("robin_spawn_egg",
+            new SpawnEggItem(ModEntities.ROBIN, 0xf4d49e, 0xec8417, new FabricItemSettings()));
 
 
     private static void addItemsToIngredientItemGroup(FabricItemGroupEntries entries) {
