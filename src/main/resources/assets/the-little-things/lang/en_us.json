@@ -1,5 +1,9 @@
 {
+  "item.the-little-things.grappling_hook": "Grappling Hook",
+
   "item.the-little-things.maple_creme_brulee": "Maple Creme Brulee",
+  "item.the-little-things.pancakes": "Pancakes",
+  "item.the-little-things.maple_syrup_bottle": "Maple Syrup Bottle",
 
 
   "block.the-little-things.maple_wood": "Maple Wood",
@@ -25,6 +29,7 @@
   "item.the-little-things.maple_boat": "Maple Boat",
   "item.the-little-things.maple_chest_boat": "Maple Chest Boat",
   "block.the-little-things.red_leaves": "Red Leaves",
+
 
   "block.the-little-things.maple_sapling": "Maple Sapling",
   "block.the-little-things.bluebell": "Bluebell",

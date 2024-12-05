@@ -60,6 +60,7 @@ public class ModBlocks {
             new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_TRAPDOOR), BlockSetType.CHERRY));
     public static final Block MAPLE_SAPLING = registerBlock("maple_sapling",
             new SaplingBlock(new MapleSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.CHERRY_SAPLING)));
+
     //SIGN AND BOAT WITH TERRAFORM API
     public static final Identifier MAPLE_SIGN_TEXTURE = new Identifier(TheLittleThings.MOD_ID, "entity/signs/maple");
     public static final Identifier MAPLE_HANGING_SIGN_TEXTURE = new Identifier(TheLittleThings.MOD_ID, "entity/signs/hanging/maple");

@@ -16,13 +16,10 @@ public class ModItemGroups {
             new Identifier(TheLittleThings.MOD_ID, "maple"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.maple"))
                     .icon(() -> new ItemStack(ModBlocks.MAPLE_PLANKS)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.GRAPPLING_HOOK);
                         entries.add(ModItems.MAPLE_CREME_BRULEE);
-                        entries.add(ModBlocks.BLUEBELL);
-                        entries.add(ModBlocks.COLUMBINE);
-                        entries.add(ModBlocks.TROUT_LILY);
-                        entries.add(ModItems.SQUIRREL_SPAWN_EGG);
-                        entries.add(ModBlocks.RED_LEAVES);
-                        entries.add(ModItems.ROBIN_SPAWN_EGG);
+                        entries.add(ModItems.PANCAKES);
+                        entries.add(ModItems.MAPLE_SYRUP_BOTTLE);
 
                         entries.add(ModBlocks.MAPLE_WOOD);
                         entries.add(ModBlocks.STRIPPED_MAPLE_WOOD);
@@ -44,7 +41,15 @@ public class ModItemGroups {
                         entries.add(ModItems.HANGING_MAPLE_SIGN);
                         entries.add(ModItems.MAPLE_BOAT);
                         entries.add(ModItems.MAPLE_CHEST_BOAT);
+
                         entries.add(ModBlocks.MAPLE_SAPLING);
+                        entries.add(ModBlocks.RED_LEAVES);
+                        entries.add(ModBlocks.BLUEBELL);
+                        entries.add(ModBlocks.COLUMBINE);
+                        entries.add(ModBlocks.TROUT_LILY);
+
+                        entries.add(ModItems.SQUIRREL_SPAWN_EGG);
+                        entries.add(ModItems.ROBIN_SPAWN_EGG);
 
                     }).build());
 
