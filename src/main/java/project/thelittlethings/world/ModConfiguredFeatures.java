@@ -1,5 +1,8 @@
 package project.thelittlethings.world;
 
+import net.fabricmc.fabric.impl.resource.loader.ModNioResourcePack;
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.*;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.registry.tag.BlockTags;
@@ -21,7 +24,7 @@ import project.thelittlethings.world.tree.custom.MapleTrunkPlacer;
 public class ModConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> MAPLE_KEY = registerKey("maple");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> TROUT_LILY_KEY = registerKey("trout_lily");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TROUT_LILY_KEY = registerKey("trout_lily_key");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 
@@ -33,18 +36,9 @@ public class ModConfiguredFeatures {
                 new MapleFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(1), 2),
 
                 new TwoLayersFeatureSize(1, 0, 2)).build());
-//        register(context, TROUT_LILY_KEY, Feature.VEGETATION_PATCH, new VegetationPatchFeatureConfig(
-//                BlockTags.FLOWERS,
-//                BlockStateProvider.of(ModBlocks.TROUT_LILY),
-//                PlacedFeatures.createEntry(),
-//                new PlacementModifier[0],
-//                VerticalSurfaceType.FLOOR,
-//                ConstantIntProvider.create(1),
-//                0.0f,
-//                5,
-//                0.8f,
-//                UniformIntProvider.create(4,7), 0.3f));
-//        ));
+
+        register(context, TROUT_LILY_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(64, 6, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+                new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.TROUT_LILY)))));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
