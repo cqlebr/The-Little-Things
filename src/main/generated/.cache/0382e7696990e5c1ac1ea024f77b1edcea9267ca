@@ -1,11 +1,11 @@
-// 1.20.1	2024-12-04T22:07:42.4442672	The Little Things/Model Definitions
+// 1.20.1	2024-12-05T01:00:16.614157	The Little Things/Model Definitions
+5e3c46824341a2e7804a860cf85e433e6373ae9a assets\the-little-things\models\block\maple_standing_sign.json
+b1566c329d75eef2a19307f08b145b67d70134b9 assets\the-little-things\models\item\maple_planks.json
 fe5015083735dbe3b0ec089a039581adb9d1dc9e assets\the-little-things\models\item\maple_chest_boat.json
+f7b1dfc0afe41847a96965bf68be984ee7b8ee42 assets\the-little-things\models\item\maple_boat.json
 41aca5ceb5ff31264a4db316acc4a4de874c0388 assets\the-little-things\blockstates\maple_planks.json
 ad47d06a5097ad4e1910c1af04860fa23f5d9437 assets\the-little-things\blockstates\maple_wall_sign.json
 ad47d06a5097ad4e1910c1af04860fa23f5d9437 assets\the-little-things\blockstates\maple_standing_sign.json
-b1566c329d75eef2a19307f08b145b67d70134b9 assets\the-little-things\models\item\maple_planks.json
-f7b1dfc0afe41847a96965bf68be984ee7b8ee42 assets\the-little-things\models\item\maple_boat.json
-91dad2fdcb3b06e9b186b60a7cd1485cbe95ab6d assets\the-little-things\models\item\maple_hanging_sign.json
 32909f4f4c98ad14b5280ed8b50ed0f4be6f0f7f assets\the-little-things\models\item\maple_sign.json
 be69892cba933c758473a12f3fecb0ce5575d76a assets\the-little-things\models\block\maple_planks.json
-5e3c46824341a2e7804a860cf85e433e6373ae9a assets\the-little-things\models\block\maple_standing_sign.json
+91dad2fdcb3b06e9b186b60a7cd1485cbe95ab6d assets\the-little-things\models\item\maple_hanging_sign.json
