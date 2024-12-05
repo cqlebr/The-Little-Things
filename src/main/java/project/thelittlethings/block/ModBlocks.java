@@ -11,6 +11,7 @@ import net.minecraft.data.family.BlockFamilies;
 import net.minecraft.data.family.BlockFamily;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.ItemStack;
 import project.thelittlethings.TheLittleThings;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registry;
@@ -21,6 +22,9 @@ import project.thelittlethings.world.tree.MapleSaplingGenerator;
 
 public class ModBlocks {
     // MAPLE WOOD BLOCKS
+
+    public static final Block RED_LEAVES = registerBlock("red_leaves",
+            new FlowerbedBlock(FabricBlockSettings.copyOf(Blocks.PINK_PETALS)));
     public static final Block MAPLE_WOOD = registerBlock("maple_wood",
             new PillarBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_WOOD)));
     public static final Block MAPLE_LOG = registerBlock("maple_log",
