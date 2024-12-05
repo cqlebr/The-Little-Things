@@ -2,6 +2,7 @@ package project.thelittlethings.world.tree.custom;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.intprovider.IntProvider;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.TestableWorld;
@@ -32,9 +33,38 @@ public class MapleFoliagePlacer extends FoliagePlacer {
         // radius on how many blocks it extends into x and z direction
         // y how much offset in the y direction from treeNode.getCenter()
         // y if it is dependent on i, also offsets each new layer in the y direction
-        generateSquare(world, placer, random, config, treeNode.getCenter().up(0), 2, 0, treeNode.isGiantTrunk());
-        generateSquare(world, placer, random, config, treeNode.getCenter().up(1), 2, 0, treeNode.isGiantTrunk());
-        generateSquare(world, placer, random, config, treeNode.getCenter().up(2), 2, 0, treeNode.isGiantTrunk());
+        //generateSquareWithHangingLeaves(world, placer, random, config , treeNode.getCenter().up(0), 2, -3, treeNode.isGiantTrunk(), 0.4f, 0.1f);
+        //Layer 1
+        generateSquare(world, placer, random, config, treeNode.getCenter().east(1), 1, -5, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().west(1), 1, -5, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().north(1), 1, -5, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().south(1), 1, -5, treeNode.isGiantTrunk());
+        //Layer 2
+        generateSquare(world, placer, random, config, treeNode.getCenter().up(0),1, -4, treeNode.isGiantTrunk());
+        //Layer 3
+        generateSquare(world, placer, random, config, treeNode.getCenter().east(1), 1, -3, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().west(1), 1, -3, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().north(1), 1, -3, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().south(1), 1, -3, treeNode.isGiantTrunk());
+        //Layer 4
+        generateSquare(world, placer, random, config, treeNode.getCenter().east(1), 0, -2, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().west(1), 0, -2, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().north(1), 0, -2, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().south(1), 0, -2, treeNode.isGiantTrunk());
+        //Layer 5
+        generateSquare(world, placer, random, config, treeNode.getCenter().up(0), 1, -1, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().east(2), 0, -1, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().west(2), 0, -1, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().north(2), 0, -1, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().south(2), 0, -1, treeNode.isGiantTrunk());
+        //Layer 6
+        generateSquare(world, placer, random, config, treeNode.getCenter().east(1), 0, 0, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().west(1), 0, 0, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().north(1), 0, 0, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().south(1), 0, 0, treeNode.isGiantTrunk());
+        //Layer 7
+        generateSquare(world, placer, random, config, treeNode.getCenter().up(0), 0, 1, treeNode.isGiantTrunk());
+
     }
 
     @Override
