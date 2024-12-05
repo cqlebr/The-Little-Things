@@ -50,6 +50,9 @@ public class ModBlocks {
     public static final Block MAPLE_PRESSURE_PLATE = registerBlock("maple_pressure_plate",
             new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,FabricBlockSettings.copyOf(Blocks.CHERRY_SLAB),
                     BlockSetType.CHERRY));
+
+    public static final Block TAPPER = registerBlock("tapper",
+            new Block(FabricBlockSettings.copyOf(Blocks.CAULDRON)));
     public static final Block MAPLE_FENCE = registerBlock("maple_fence",
             new FenceBlock(FabricBlockSettings.copyOf(Blocks.CHERRY_FENCE)));
     public static final Block MAPLE_FENCE_GATE = registerBlock("maple_fence_gate",
@@ -74,7 +77,6 @@ public class ModBlocks {
             new TerraformHangingSignBlock(MAPLE_HANGING_SIGN_TEXTURE,MAPLE_HANGING_GUI_SIGN_TEXTURE,FabricBlockSettings.copyOf(Blocks.CHERRY_HANGING_SIGN)));
     public static final Block WALL_HANGING_MAPLE_SIGN = Registry.register(Registries.BLOCK, new Identifier(TheLittleThings.MOD_ID,"maple_wall_hanging_sign"),
             new TerraformWallHangingSignBlock(MAPLE_HANGING_SIGN_TEXTURE, MAPLE_HANGING_GUI_SIGN_TEXTURE, FabricBlockSettings.copyOf(Blocks.CHERRY_WALL_HANGING_SIGN)));
-
     public static final BlockFamily MAPLE_FAMILY = BlockFamilies.register(ModBlocks.MAPLE_PLANKS)
             .sign(ModBlocks.STANDING_MAPLE_SIGN, ModBlocks.WALL_MAPLE_SIGN)
             .group("wooden").unlockCriterionName("has_planks").build();

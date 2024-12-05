@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    "SSS",
+    "EBE"
+  ],
+  "key": {
+    "M": {
+      "item": "the-little-things:maple_syrup_bottle"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "item": "minecraft:milk_bucket"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    }
+  },
+  "result": {
+    "item": "the-little-things:maple_creme_brulee",
+    "count": 1
+  }
+}

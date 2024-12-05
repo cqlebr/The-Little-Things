@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " M ",
+    "WSW",
+    "EBE"
+  ],
+  "key": {
+    "M": {
+      "item": "the-little-things:maple_syrup_bottle"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "B": {
+      "item": "minecraft:milk_bucket"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "result": {
+    "item": "the-little-things:pancakes",
+    "count": 1
+  }
+}

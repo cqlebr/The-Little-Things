@@ -77,7 +77,7 @@ public class SquirrelEntity extends AnimalEntity {
     protected void initGoals() {
         this.goalSelector.add(0, new SwimGoal(this)); // main priority, prevents mob from drowning, priority 0
         this.goalSelector.add(1, new AnimalMateGoal(this, 1.15D)); // allows them to mate given proper food
-        this.goalSelector.add(2, new TemptGoal(this, 1.25d, Ingredient.ofItems(ModItems.MAPLE_CREME_BRULEE), false)); //
+        this.goalSelector.add(2, new TemptGoal(this, 1.25d, Ingredient.ofItems(ModItems.MAPLE_SEED), false)); //
         this.goalSelector.add(3, new FollowParentGoal(this, 1.15D));
         this.goalSelector.add(4, new WanderAroundFarGoal(this, 1D));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4f));
@@ -102,7 +102,7 @@ public class SquirrelEntity extends AnimalEntity {
     }
 
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(ModItems.MAPLE_CREME_BRULEE);
+        return stack.isOf(ModItems.MAPLE_SEED);
     }
 
 

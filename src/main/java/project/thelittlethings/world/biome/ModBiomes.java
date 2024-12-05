@@ -19,6 +19,7 @@ import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.DefaultBiomeFeatures;
 import net.minecraft.world.gen.feature.VegetationPlacedFeatures;
 import project.thelittlethings.TheLittleThings;
+import project.thelittlethings.entity.ModEntities;
 
 public class ModBiomes {
     public static final RegistryKey<Biome> MAPLE_FOREST_BIOME = RegistryKey.of(RegistryKeys.BIOME,
@@ -39,6 +40,8 @@ public class ModBiomes {
     public static Biome testBiome(Registerable<Biome> context) {
         SpawnSettings.Builder spawnBuilder = new SpawnSettings.Builder();
 
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.SQUIRREL, 100, 2, 3));
+        spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(ModEntities.ROBIN, 100, 2, 3));
         spawnBuilder.spawn(SpawnGroup.CREATURE, new SpawnSettings.SpawnEntry(EntityType.RABBIT, 100, 2, 3));
 
         DefaultBiomeFeatures.addFarmAnimals(spawnBuilder);
@@ -70,7 +73,7 @@ public class ModBiomes {
                         .waterColor(0x27aba4)
                         .waterFogColor(0x062927)
                         .skyColor(0x4badad)
-                        .grassColor(0x9c6d35)
+                        .grassColor(0x9e8026)
                         .fogColor(0xaafafa)
                         .moodSound(BiomeMoodSound.CAVE).build())
                 .build();

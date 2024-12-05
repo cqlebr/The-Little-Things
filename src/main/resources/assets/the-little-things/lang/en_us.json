@@ -1,6 +1,6 @@
 {
   "item.the-little-things.grappling_hook": "Grappling Hook",
-
+  "item.the-little-things.maple_seed": "Maple Seed",
   "item.the-little-things.maple_creme_brulee": "Maple Creme Brulee",
   "item.the-little-things.pancakes": "Pancakes",
   "item.the-little-things.maple_syrup_bottle": "Maple Syrup Bottle",
@@ -28,6 +28,8 @@
   "block.the-little-things.maple_wall_hanging_sign": "Maple Wall Hanging Sign",
   "item.the-little-things.maple_boat": "Maple Boat",
   "item.the-little-things.maple_chest_boat": "Maple Chest Boat",
+
+  "block.the-little-things.tapper": "Tapper",
   "block.the-little-things.red_leaves": "Red Leaves",
 
 

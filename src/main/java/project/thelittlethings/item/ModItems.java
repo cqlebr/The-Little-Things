@@ -14,6 +14,9 @@ import project.thelittlethings.entity.ModBoats;
 import project.thelittlethings.entity.ModEntities;
 
 public class ModItems {
+
+    public static final Item MAPLE_SEED = registerItem("maple_seed",
+            new Item(new FabricItemSettings()));
     public static final Item MAPLE_CREME_BRULEE = registerItem("maple_creme_brulee", new Item(new FabricItemSettings().food(ModFoodComponents.MAPLE_CREME_BRULEE)));
     public static final Item PANCAKES = registerItem("pancakes", new Item(new FabricItemSettings().food(ModFoodComponents.PANCAKES)));
 

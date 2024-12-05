@@ -9,7 +9,7 @@
   "downfall": 0.7,
   "effects": {
     "fog_color": 11205370,
-    "grass_color": 10251573,
+    "grass_color": 10387494,
     "mood_sound": {
       "block_search_extent": 8,
       "offset": 2.0,
@@ -97,10 +97,22 @@
     "axolotls": [],
     "creature": [
       {
+        "type": "the-little-things:squirrel",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 100
+      },
+      {
+        "type": "the-little-things:robin",
+        "maxCount": 3,
+        "minCount": 2,
+        "weight": 100
+      },
+      {
         "type": "minecraft:rabbit",
         "maxCount": 3,
         "minCount": 2,
-        "weight": 4
+        "weight": 100
       },
       {
         "type": "minecraft:sheep",

@@ -42,6 +42,9 @@ public class ModItemGroups {
                         entries.add(ModItems.MAPLE_BOAT);
                         entries.add(ModItems.MAPLE_CHEST_BOAT);
 
+                        entries.add(ModBlocks.TAPPER);
+
+                        entries.add(ModItems.MAPLE_SEED);
                         entries.add(ModBlocks.MAPLE_SAPLING);
                         entries.add(ModBlocks.RED_LEAVES);
                         entries.add(ModBlocks.BLUEBELL);

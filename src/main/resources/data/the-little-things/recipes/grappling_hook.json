@@ -1,16 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "  P",
-    " R ",
-    "   "
+    "II ",
+    "IS ",
+    "  T"
   ],
   "key": {
-    "P": {
-      "item": "minecraft:iron_pickaxe"
+    "I": {
+      "item": "minecraft:iron_ingot"
     },
-    "R": {
-      "item": "minecraft:lead"
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "T": {
+      "item": "minecraft:string"
     }
   },
   "result": {

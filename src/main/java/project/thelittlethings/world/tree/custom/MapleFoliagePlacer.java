@@ -62,6 +62,8 @@ public class MapleFoliagePlacer extends FoliagePlacer {
         generateSquare(world, placer, random, config, treeNode.getCenter().west(1), 0, 0, treeNode.isGiantTrunk());
         generateSquare(world, placer, random, config, treeNode.getCenter().north(1), 0, 0, treeNode.isGiantTrunk());
         generateSquare(world, placer, random, config, treeNode.getCenter().south(1), 0, 0, treeNode.isGiantTrunk());
+        generateSquare(world, placer, random, config, treeNode.getCenter().up(0), 0, 0, treeNode.isGiantTrunk());
+
         //Layer 7
         generateSquare(world, placer, random, config, treeNode.getCenter().up(0), 0, 1, treeNode.isGiantTrunk());
 
