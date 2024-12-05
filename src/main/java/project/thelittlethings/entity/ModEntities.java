@@ -20,7 +20,7 @@ public class ModEntities {
     public static final EntityType<RobinEntity> ROBIN = Registry.register(Registries.ENTITY_TYPE,
             new Identifier(TheLittleThings.MOD_ID, "robin"),
             FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, RobinEntity::new)
-                    .dimensions(EntityDimensions.fixed(1f, 1f)).build());
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.5f)).build());
 
 
 }

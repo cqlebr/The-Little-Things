@@ -44,12 +44,12 @@ public class RobinEntity extends AnimalEntity {
 
     public RobinEntity(EntityType<? extends AnimalEntity> entityType, World world) {
         super(entityType, world);
-        this.moveControl = new FlightMoveControl(this, 20, false);
+        this.moveControl = new FlightMoveControl(this, 50, false);
     }
 
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {
-            this.idleAnimationTimeout = this.random.nextInt(20) + 40;
+            this.idleAnimationTimeout = this.random.nextInt(15) + 30;
             this.idleAnimationState.start(this.age);
         } else {
             --this.idleAnimationTimeout;
@@ -87,7 +87,7 @@ public class RobinEntity extends AnimalEntity {
     protected void initGoals() {
         this.goalSelector.add(0, new EscapeDangerGoal(this, (double)1.25F));
         this.goalSelector.add(0, new SwimGoal(this)); // main priority, prevents mob from drowning, priority 0
-        this.goalSelector.add(1, new FlyGoal(this, 1.0D));
+        this.goalSelector.add(1, new FlyGoal(this, 0.9D));
         this.goalSelector.add(2, new WanderAroundGoal(this, 1D));
         this.goalSelector.add(2, new AnimalMateGoal(this, 1.15D)); // allows them to mate given proper food
         this.goalSelector.add(3, new TemptGoal(this, 1.25d, Ingredient.ofItems(ModItems.MAPLE_CREME_BRULEE), false)); //
@@ -130,7 +130,7 @@ public class RobinEntity extends AnimalEntity {
         this.flapSpeed *= 0.9F;
         Vec3d vec3d = this.getVelocity();
         if (!this.isOnGround() && vec3d.y < (double)0.0F) {
-            this.setVelocity(vec3d.multiply((double)1.0F, 0.6, (double)1.0F));
+            this.setVelocity(vec3d.multiply((double)1.0F, 0.4, (double)1.0F));
         }
 
         this.flapProgress += this.flapSpeed * 2.0F;
@@ -151,18 +151,18 @@ public class RobinEntity extends AnimalEntity {
     // custom sounds ambient, hurt, death etc.. can add own as long as registered
     @Override
     protected @Nullable SoundEvent getAmbientSound() {
-        return SoundEvents.ENTITY_FOX_AMBIENT;
+        return SoundEvents.ENTITY_PARROT_AMBIENT;
     }
 
 
     @Override
     protected @Nullable SoundEvent getHurtSound(DamageSource source) {
-        return SoundEvents.ENTITY_CAT_HURT;
+        return SoundEvents.ENTITY_PARROT_HURT;
     }
 
 
     @Override
     protected @Nullable SoundEvent getDeathSound() {
-        return SoundEvents.ENTITY_DOLPHIN_DEATH;
+        return SoundEvents.ENTITY_PARROT_DEATH;
     }
 }

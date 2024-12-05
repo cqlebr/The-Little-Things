@@ -1,15 +1,19 @@
 package project.thelittlethings.entity.custom;
 
 import net.minecraft.entity.AnimationState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityPose;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
+import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.passive.AnimalEntity;
+import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.entity.passive.PassiveEntity;
+import net.minecraft.entity.passive.TurtleEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -21,6 +25,7 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 import project.thelittlethings.entity.ModEntities;
 import project.thelittlethings.item.ModItems;
+import net.minecraft.entity.ai.goal.ActiveTargetGoal;
 
 public class SquirrelEntity extends AnimalEntity {
 
@@ -56,6 +61,13 @@ public class SquirrelEntity extends AnimalEntity {
         }
     }
 
+    private float getAttackDamage() {
+        return (float)this.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
+    }
+
+    public boolean tryAttack(Entity target) {
+        return target.damage(this.getDamageSources().mobAttack(this), this.getAttackDamage());
+    }
 
 
 
@@ -70,6 +82,10 @@ public class SquirrelEntity extends AnimalEntity {
         this.goalSelector.add(4, new WanderAroundFarGoal(this, 1D));
         this.goalSelector.add(5, new LookAtEntityGoal(this, PlayerEntity.class, 4f));
         this.goalSelector.add(6, new LookAroundGoal(this));
+        this.goalSelector.add(7, new PounceAtTargetGoal(this, 0.3F));
+        this.goalSelector.add(8, new AttackGoal(this));
+        this.targetSelector.add(1, new ActiveTargetGoal<>(this, ChickenEntity.class, false));
+
     }
 
 
@@ -79,13 +95,16 @@ public class SquirrelEntity extends AnimalEntity {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 10) // squirrel base health value
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.3f) // move speed
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, (double) 3.0F)
                 .add(EntityAttributes.GENERIC_ARMOR, 0.1f);
+
 
     }
 
     public boolean isBreedingItem(ItemStack stack) {
         return stack.isOf(ModItems.MAPLE_CREME_BRULEE);
     }
+
 
 
 
