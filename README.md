@@ -9,8 +9,8 @@
   + Could download Ultimate Edition if you sign up for student license (not neccessary, community is fine enough)
 + Download Minecraft Development Plugin in IntelliJ `File > Settings > Plugins > Marketplace Tab` and search `Minecraft Development`
 + Clone the Repo and to run minecraft click the Run Minecraft Client in the Top Right,
-  + If it doesn't work click the gradle Elephant on the right side and go to `template > Tasks > fabric > runDatagen`, this will run dataGen then once it's done you
-  + can run the client and it should work.
+  + If it doesn't work click the gradle Elephant on the right side and go to `template > Tasks > fabric > runDatagen`, this will run dataGen then once it's done you can run the client and it should work.
+    
 
 ### DEFINITELY ADDING (maple stuff): (21+ items)
 - Maple trees and maple wood + maple craftable items (14+ items) (Caleb: not finished)
